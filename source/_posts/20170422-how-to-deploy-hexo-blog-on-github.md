@@ -1,5 +1,5 @@
 ---
-title: 如何在Github上创建一个Hexo博客
+title: 如何在Github上构建并部署Hexo博客
 categories: Web
 date: 2017-04-22 20:45:12
 tags:
