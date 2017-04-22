@@ -1,1 +1,1 @@
-[Jiuwen's Blog](jiangjiuwen.com)
+[Jiuwen's Blog](http://jiangjiuwen.com)
