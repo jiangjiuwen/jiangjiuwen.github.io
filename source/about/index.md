@@ -6,7 +6,7 @@ date: 2017-04-23 10:12:05
 
 # About Me
 
-我是一名.NET和Python人员，从事医疗软件研发工作。
+我是一名.NET和Python开发人员，从事医疗软件研发工作。
 
 # About Blog
 
