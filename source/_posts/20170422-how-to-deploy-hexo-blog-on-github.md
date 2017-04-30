@@ -1,10 +1,11 @@
 ---
-title: 如何在Github上构建并部署Hexo博客
+title: 如何在GitHub上构建并部署Hexo博客
 categories: Web
 date: 2017-04-22 20:45:12
 tags:
 - Hexo
 - GitHub
+keywords: Hexo,GitHub
 ---
 当你在搜索引擎中同时输入`Hexo`、`GitHub`等关键字，浏览器会立马展现无数教你利用GitHub和Hexo构建免费个人博客的教程，所以这里不再对此赘述，本文旨在记录我这两天搭建博客的过程中遇到的问题以及解决办法。
 

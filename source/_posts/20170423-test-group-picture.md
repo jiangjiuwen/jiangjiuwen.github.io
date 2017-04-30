@@ -1,10 +1,11 @@
 ---
 title: test-group-picture
-categories: Life
+categories: Travel
 tags:
 - 黄山
 date: 2017-04-23 18:34:40
 type: 'picture'
+keywords: 旅游,黄山
 ---
 <blockquote class="blockquote-center">黄山归来不看山</blockquote>
 {% gp group-layout %}
