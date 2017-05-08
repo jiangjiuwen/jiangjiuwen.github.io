@@ -3,7 +3,7 @@ title: 我的数据库技术栈
 tags:
   - 数据库
   - 技术栈
-categories: Technology Stack
+categories: Database
 date: 2017-05-01 14:06:21
 keywords: 数据库,技术栈
 ---
