@@ -17,7 +17,7 @@ keywords: '设计模式,单例模式'
 - 单例类必须自己创建自己的唯一实例
 - 单例类必须给其他对象提供这一实例
 
-``` C#
+{% code lang:csharp %}
 public class SingletonPattern
 {
     private static SingletonPattern _instance;
@@ -38,4 +38,4 @@ public class SingletonPattern
         Console.WriteLine("Hello Jiang");
     }
 }
-```
+{% endcode %}
