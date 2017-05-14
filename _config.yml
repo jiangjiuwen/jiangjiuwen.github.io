@@ -7,7 +7,7 @@ title: Jiuwen's Blog
 subtitle: .NET & Python Developer
 description:
 author: Jiang Jiuwen
-language: en
+language: zh-Hans
 timezone:
 
 # URL
@@ -70,3 +70,6 @@ theme: next
 deploy:
   type: git
   repo: git@github.com:jiangjiuwen/jiangjiuwen.github.io.git
+
+baidusitemap:
+    path: baidusitemap.xml

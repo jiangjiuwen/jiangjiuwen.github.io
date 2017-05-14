@@ -3,6 +3,7 @@ title: 单例模式
 categories: Design pattern
 date: 2017-05-08 20:31:56
 tags:
+- 设计模式
 - 单例模式
 keywords: '设计模式,单例模式'
 ---

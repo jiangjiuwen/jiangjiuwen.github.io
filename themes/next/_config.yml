@@ -6,7 +6,7 @@
 favicon: /logo.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "jiangjiuwen"
+keywords: "jiangjiuwen,python,.net,blog"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -49,7 +49,7 @@ menu:
   archives: /archives
   tags: /tags
   about: /about
-  #sitemap: /sitemap.xml
+  sitemap: /sitemap.xml
   #commonweal: /404.html
 
 
