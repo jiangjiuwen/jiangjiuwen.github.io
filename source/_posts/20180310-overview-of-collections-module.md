@@ -11,8 +11,7 @@ collections模块是python自带的模块，为开发者提供了很多方便且
 
 # collections模块常用数据结构
 
-collections模块中最常被使用的数据结构主要包括deque、defaultdict、namedtuple、Counter、OrderedDict、ChainMap
-这6个，详细信息如下表所示。
+collections模块中最常被使用的数据结构主要包括deque、defaultdict、namedtuple、Counter、OrderedDict、ChainMap这6个，如下表所示。
 
 | 名称 | 定义 |
 |:------:|------|
