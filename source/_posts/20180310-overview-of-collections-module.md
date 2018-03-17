@@ -22,8 +22,6 @@ collections模块中最常被使用的数据结构主要包括deque、defaultdic
 |OrderedDict|按添加顺序排列的字典类型|
 |ChainMap|将多个字典链接为一个字典|
 
-<!-- more -->
-
 # tuple和namedtuple
 
 tuple特点：
