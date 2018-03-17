@@ -219,10 +219,10 @@ sidebar:
   offset: 12
 
   # Back to top in sidebar (only for Pisces | Gemini).
-  b2t: false
+  b2t: true
 
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
@@ -467,8 +467,8 @@ valine:
   appkey: WJnSz2HPubLLqdC0iFSroNIH # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: Just go go # comment box placeholder
-  avatar: mm # gravatar style
+  placeholder: # comment box placeholder
+  avatar: identicon # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
 
