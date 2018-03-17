@@ -1,6 +1,6 @@
 ---
-title: test-group-picture
-categories: Travel
+title: travel-to-huangshan
+categories: 游记
 tags:
 - 黄山
 date: 2017-04-23 18:34:40

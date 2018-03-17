@@ -1,6 +1,6 @@
 ---
 title: collections模块常用数据结构
-categories: Python
+categories: 编程之美
 date: 2018-03-10 13:57:08
 tags:
 - Python

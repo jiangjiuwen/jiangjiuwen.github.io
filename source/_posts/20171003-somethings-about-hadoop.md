@@ -1,10 +1,10 @@
 ---
 title: Somethings about Hadoop
-categories: Big Data
+categories: 编程之美
 date: 2017-10-03 15:56:12
 tags:
 - Hadoop
-- Big data
+- 大数据
 ---
 
 # 前言

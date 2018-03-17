@@ -1,6 +1,6 @@
 ---
 title: my-trip-to-suzhou
-categories: Travel
+categories: 游记
 date: 2017-04-30 16:23:54
 tags:
 - 苏州

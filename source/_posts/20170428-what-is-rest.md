@@ -1,6 +1,6 @@
 ---
 title: 我所理解的REST
-categories: Web
+categories: 编程之美
 date: 2017-04-28 20:39:07
 tags:
 - REST

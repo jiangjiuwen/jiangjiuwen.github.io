@@ -1,6 +1,6 @@
 ---
 title: 从上海到武汉
-categories: Life
+categories: 随笔
 date: 2017-07-09 20:12:06
 tags:
 - 武汉

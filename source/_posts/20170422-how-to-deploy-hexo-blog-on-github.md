@@ -1,6 +1,6 @@
 ---
 title: 如何在GitHub上构建并部署Hexo博客
-categories: Web
+categories: 编程之美
 date: 2017-04-22 20:45:12
 tags:
 - Hexo

@@ -1,6 +1,6 @@
 ---
 title: Python的几种导入操作
-categories: Python
+categories: 编程之美
 date: 2018-03-16 22:10:41
 tags:
 - Python

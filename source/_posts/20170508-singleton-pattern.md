@@ -1,6 +1,6 @@
 ---
 title: 单例模式
-categories: Design pattern
+categories: 编程之美
 date: 2017-05-08 20:31:56
 tags:
 - 设计模式

@@ -1,9 +1,9 @@
 ---
 title: 设计模式概览
-categories: Design pattern
+categories: 编程之美
 date: 2017-10-01 22:41:57
 tags:
-- Design pattern
+- 设计模式
 ---
 设计模式共分为三种类型，分别为：
 - 创建型。这一类设计模式主要`提供一种创建对象但是隐藏创建逻辑的方式`。比如单例模式、工厂模式。
