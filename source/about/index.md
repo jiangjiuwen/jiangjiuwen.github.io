@@ -14,4 +14,5 @@ date: 2017-04-23 10:12:05
 
 # Timeline
 
-- 2017-04-22 博客上线，采用Hexo博客框架，托管于GitHub，使用NexT主题，启用独立域名[jiangjiuwen.com](http://jiangjiuwen.com)
+- 2018-03-17  NexT主题升级至6.0.6版本，启用[Valine](https://valine.js.org/)评论系统
+- 2017-04-22 博客上线，采用[Hexo](https://hexo.io/)博客框架，托管于GitHub，使用[NexT](https://github.com/theme-next/hexo-theme-next)主题，启用独立域名[jiangjiuwen.com](http://jiangjiuwen.com)

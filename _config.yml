@@ -7,8 +7,11 @@ title: Jiuwen's Blog
 subtitle: .NET & Python Developer
 description:
 author: Jiang Jiuwen
-language: zh-Hans
+language: zh-CN
 timezone:
+
+# Set default keywords (Use a comma to separate)
+keywords: "jiangjiuwen,python,.net,blog"
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -44,7 +47,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: LIFE
+default_category: 随笔
 category_map:
 tag_map:
 
