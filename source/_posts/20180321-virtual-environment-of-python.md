@@ -59,15 +59,16 @@ set properly.
 # 使用virtualenvwrapper管理虚拟环境
 基于不同的python版本创建虚拟环境
 ```bash
-mkvirtualenv -p /usr/bin/python2 scrapy_py2  # 创建python2虚拟环境
-mkvirtualenv -p /usr/bin/python3 scrapy_py3  # 创建python3虚拟环境
+mkvirtualenv -p /usr/bin/python2 scrapy_py2  # 创建基于python2的虚拟环境scrapy_py2
+mkvirtualenv -p /usr/bin/python3 scrapy_py3  # 创建基于python3虚拟环境scrapy_py3
 # 如果提示mkvirtualenv权限问题，请检查$HOME/.venvs文件所属的用户和组。
 ```
 创建成功之后系统默认进入当前虚拟环境，命令行前缀显示当前虚拟环境名称。进入虚拟环境之后所有的操作都基于当前python环境，不会对其他python环境产生影响。
 
 其他命令如下所示
 ```bash
-workon scrapy_py2  # 切换虚拟环境
+workon  # 列出所有的虚拟环境
+workon scrapy_py2  # 切换到虚拟环境scrapy_py2
 deactivate  # 退出当前虚拟环境
 rmvirtualenv scrapy_py2  # 删除虚拟环境scrapy_py2
 ```
