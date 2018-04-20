@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/logo.ico?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/logo.ico?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/logo.ico?v=6.0.6">
+
+
+  <link rel="mask-icon" href="/logo.ico?v=6.0.6" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="这篇文章实际上是对我的数据库知识的一点总结。 下图是我在手机上用MindNode(强烈推荐Apple产品用户下载使用)画的一张脑图。  什么是数据库维基百科如是说：  数据库指的是以一定方式储存在一起、能为多个用户共享、具有尽可能小的冗余度、与应用程序彼此独立的数据集合。  通俗的理解就是数据库是一个用于存储数据的仓库，用户可以通过增删改查等操作对仓库中的数据进行管理。">
+<meta name="keywords" content="数据库,技术栈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的数据库技术栈">
+<meta property="og:url" content="http://jiangjiuwen.com/编程之美/my-database-technology-stack/index.html">
+<meta property="og:site_name" content="Jiuwen&#39;s Blog">
+<meta property="og:description" content="这篇文章实际上是对我的数据库知识的一点总结。 下图是我在手机上用MindNode(强烈推荐Apple产品用户下载使用)画的一张脑图。  什么是数据库维基百科如是说：  数据库指的是以一定方式储存在一起、能为多个用户共享、具有尽可能小的冗余度、与应用程序彼此独立的数据集合。  通俗的理解就是数据库是一个用于存储数据的仓库，用户可以通过增删改查等操作对仓库中的数据进行管理。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://7xr526.com1.z0.glb.clouddn.com/database%20technology%20stack/new%20image%20-%202fm40.jpg">
+<meta property="og:updated_time" content="2018-04-01T09:00:23.785Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的数据库技术栈">
+<meta name="twitter:description" content="这篇文章实际上是对我的数据库知识的一点总结。 下图是我在手机上用MindNode(强烈推荐Apple产品用户下载使用)画的一张脑图。  什么是数据库维基百科如是说：  数据库指的是以一定方式储存在一起、能为多个用户共享、具有尽可能小的冗余度、与应用程序彼此独立的数据集合。  通俗的理解就是数据库是一个用于存储数据的仓库，用户可以通过增删改查等操作对仓库中的数据进行管理。">
+<meta name="twitter:image" content="http://7xr526.com1.z0.glb.clouddn.com/database%20technology%20stack/new%20image%20-%202fm40.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jiuwen's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://jiangjiuwen.com/编程之美/my-database-technology-stack/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>我的数据库技术栈 | Jiuwen's Blog</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97899361-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-97899361-1');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jiuwen's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">.NET & Python Developer</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+</li>
+
+      
+
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jiangjiuwen.com/编程之美/my-database-technology-stack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiang Jiuwen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiuwen's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">我的数据库技术栈</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-01T14:06:21+08:00">2017-05-01</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程之美/" itemprop="url" rel="index"><span itemprop="name">编程之美</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/编程之美/my-database-technology-stack/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/编程之美/my-database-technology-stack/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/编程之美/my-database-technology-stack/" class="leancloud_visitors" data-flag-title="我的数据库技术栈">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这篇文章实际上是对我的数据库知识的一点总结。</p>
+<p>下图是我在手机上用MindNode(强烈推荐Apple产品用户下载使用)画的一张脑图。</p>
+<p><img src="http://7xr526.com1.z0.glb.clouddn.com/database%20technology%20stack/new%20image%20-%202fm40.jpg" class="full-image" title="Database Technology Stack"></p>
+<h1 id="什么是数据库"><a href="#什么是数据库" class="headerlink" title="什么是数据库"></a>什么是数据库</h1><p><a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E5%BA%93" target="_blank" rel="noopener">维基百科</a>如是说：</p>
+<blockquote>
+<p>数据库指的是以一定方式储存在一起、能为多个用户共享、具有尽可能小的冗余度、与应用程序彼此独立的数据集合。</p>
+</blockquote>
+<p>通俗的理解就是数据库是一个用于存储数据的仓库，用户可以通过增删改查等操作对仓库中的数据进行管理。<br><a id="more"></a></p>
+<h1 id="数据库分类"><a href="#数据库分类" class="headerlink" title="数据库分类"></a>数据库分类</h1><p>目前数据库主要分为关系型数据库和非关系型数据库两大类。</p>
+<h2 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h2><p>关系型数据库(RDBMS)是指采用关系模型来组织数据的数据库，其中的关系模式就是指二维表格模型，所以关系型数据库就是由多张二维表格以及表格之间的关联所组成的数据组织。</p>
+<p>常见的关系型数据库主要有：MSSQL、MySQL、Oracle。</p>
+<h2 id="非关系型数据库"><a href="#非关系型数据库" class="headerlink" title="非关系型数据库"></a>非关系型数据库</h2><p>非关系型数据库又叫做NoSQL(Not only SQL)，顾名思义，不仅仅是SQL，算得上是对关系型数据库的扩展吧。</p>
+<p>常见的非关系型数据库有四大类：键值存储数据库、列存储数据库、文档型数据库、图形数据库。比如比较流行的MongoDB就是一种文档型数据库。</p>
+<h2 id="RDBMS和NoSQL比较"><a href="#RDBMS和NoSQL比较" class="headerlink" title="RDBMS和NoSQL比较"></a>RDBMS和NoSQL比较</h2><ul>
+<li>非关系型数据库简单易部署，而且基本都是开源软件，而关系型数据库则不易部署且价格昂贵</li>
+<li>非关系型数据库查询速度更快。因为非关系型数据库的数据通常存储与缓存之中，而关系型数据库将数据存储在硬盘中</li>
+<li>非关系型数据库数据存储格式多样化，比如键值对形式、文档形式、图片形式等，而关系型数据库只支持基础数据类型</li>
+<li>非关系型数据库具有较好的扩展性，但是关系型数据库由于有太多的机制限制其扩展性</li>
+<li>关系型数据库提供SQL语言的支持，但是非关系型数据库不支持</li>
+<li>关系型数据库支持事务，而非关系型数据库不支持</li>
+</ul>
+<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><p>事务是关系型数据库独有的特性，主要包括原子性、一致性、隔离性和持久性，简称ACID。</p>
+<h2 id="原子性-Atomicity"><a href="#原子性-Atomicity" class="headerlink" title="原子性(Atomicity)"></a>原子性(Atomicity)</h2><p>原子性是指把一系列数据库操作语句作为一个原子来对待，即一个事务包含一系列操作语句，这些语句要么全部执行成功，要么某句失败后全部操作回滚，不存在部分执行成功，部分执行失败的可能。比如，执行从账户A向账户B转账100块的操作，结果是要么A账户减少100块且B账户增加100块，要么A账户金额不变且B账户金额不变，不存在A账户减少100块，而B账户金额不变的情况。</p>
+<h2 id="一致性-Consistency"><a href="#一致性-Consistency" class="headerlink" title="一致性(Consistency)"></a>一致性(Consistency)</h2><p>一致性是指一个事务在开始前和开始后数据库的完整性约束没有改变。即一个事务执行前和执行后数据始终符合之前设置的约束，比如主外键关联、数据检查等始终保持不变。</p>
+<h2 id="隔离性-Isolation"><a href="#隔离性-Isolation" class="headerlink" title="隔离性(Isolation)"></a>隔离性(Isolation)</h2><p>隔离性是指多个事务之间是不关联的相互独立的，一个事务在执行过程中不能访问到另一个事务执行过程中的数据。但是完全的隔离是不现实的，除非一次只执行一个事务，但是这样做的效率是不忍直视的。事务之间的相互影响主要有以下三种。</p>
+<ul>
+<li>脏读。即一个事务读取了另一个事务还未提交的数据，而这个数据有可能被回滚</li>
+<li>不可重复度。即一个事务范围内两次相同的查询却返回了不同的数据，比如，事务第一次查询之后另一个事务在数据库中对该数据进行了修改，导致事务第二次查询的结果和第一次查询的结果不一致。</li>
+<li>幻读。即一个事务A在更新表中数据的时候，另一个事务Bi新增了一条符合事务A修改条件的新数据，导致最后发现还有事务A没有更新的数据，就像幻觉一样。</li>
+</ul>
+<p>所以为了消除事务之间的相互影响，可以通过对数据库加锁的方式来隔离不同的事务，但是这样会导致查询效率降低。</p>
+<h2 id="持久性-Durability"><a href="#持久性-Durability" class="headerlink" title="持久性(Durability)"></a>持久性(Durability)</h2><p>持久性是指事务对数据进行的改变会持续保留在数据库中，不会随着事务的结束或关闭数据库等操作而回滚。</p>
+<h1 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h1><p>为了建立冗余较小，结构合理的数据库，设计数据库时必须遵循一定的规范，在关系型数据库中，这种规则就叫做范式。在实际开发中使用的范式主要有三种。</p>
+<h2 id="第一范式-NF1"><a href="#第一范式-NF1" class="headerlink" title="第一范式(NF1)"></a>第一范式(NF1)</h2><p>第一范式确保每列保持原子性。第一范式是数据库设计最基本的范式，如果表中所有字段都是不可再分解的原子值，就说明该数据库设计符合第一范式。例如，根据项目实际情况，可将地址拆分为省份、城市、区域、详细地址等字段，这样对地址中的某一部分操作就变得非常方便。</p>
+<h2 id="第二范式-NF2"><a href="#第二范式-NF2" class="headerlink" title="第二范式(NF2)"></a>第二范式(NF2)</h2><p>第二范式确保表中的每列都和主键有关。即一张表只能存储一类数据，而不能将多种数据存在一张表中。比如订单信息和商品信息属于两类信息，应该分开建表存储，并通过关联表进行关联，而不是将订单信息和商品信息存储在一张表中。</p>
+<h2 id="第三范式-NF3"><a href="#第三范式-NF3" class="headerlink" title="第三范式(NF3)"></a>第三范式(NF3)</h2><p>第三范式确保每列都和主键直接关联，而不是间接关联。第三范式和第二范式有点相似，不同之处在于将不同类信息通过主外键关系进行关联。</p>
+<h1 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h1><h2 id="数据定义语言-DDL"><a href="#数据定义语言-DDL" class="headerlink" title="数据定义语言(DDL)"></a>数据定义语言(DDL)</h2><p>数据定义语言(Data Definition Language)用于对数据库或数据库表进行操作，比如<code>CREATE</code>、<code>ALTER</code>、<code>DROP</code></p>
+<h2 id="数据操作语言-DML"><a href="#数据操作语言-DML" class="headerlink" title="数据操作语言(DML)"></a>数据操作语言(DML)</h2><p>数据操作语言(Data Manipulation Language)用于对数据进行操作，比如<code>SELECT</code>、<code>INSERT INTO</code>、<code>UPDATE</code>、<code>DELETE</code></p>
+<h2 id="数据控制语言-DCL"><a href="#数据控制语言-DCL" class="headerlink" title="数据控制语言(DCL)"></a>数据控制语言(DCL)</h2><p>数据控制语言(Data Control Language)用于设置或更改数据库用户或角色权限，比如<code>GRANT</code>、<code>DENY</code>、<code>REVOKE</code></p>
+<h2 id="事务控制语言-TCL"><a href="#事务控制语言-TCL" class="headerlink" title="事务控制语言(TCL)"></a>事务控制语言(TCL)</h2><p>事务控制语言(Transact Control Language)用于控制事务的语言，比如<code>SAVEPOINT</code>、<code>ROLLBACK</code>、<code>COMMIT</code></p>
+<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p>索引就是加快检索表中数据的方法。其原理类似于书籍的目录，即不需要扫描整个数据库都能快速找到所需的数据。</p>
+<h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><p>视图是虚表，是从一个或多个基本表中导出的表，视图对应的数据不进行实际存储，数据库只存储视图的定义，在对视图的数据进行操作时，系统根据视图的定义去操作与视图相关联的基本表。</p>
+<h2 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h2><p>触发器是一种特殊的存储过程。一般的存储过程是直接调用，而触发器主要是通过事件，比如增删改，进行触发而被执行，其在表中数据发生变化时自动强制执行。</p>
+<p>常见的触发器有两种：AFTER(FOR) INSTEAD OF，用于INSERT、UPDATE、DELETE事件。</p>
+<p>AFTER(FOR)表示执行代码后执行触发器</p>
+<p>INSTEAD OF表示执行代码前，用已经写好的触发器代替你的操作。</p>
+<blockquote>
+<p>以上很多都只解释了定义，没有解释原理和举例，后续再写吧，毕竟这篇文章只是用来解释我画的那张脑图。</p>
+</blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Jiang Jiuwen</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://jiangjiuwen.com/编程之美/my-database-technology-stack/" title="我的数据库技术栈">http://jiangjiuwen.com/编程之美/my-database-technology-stack/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据库/" rel="tag"># 数据库</a>
+          
+            <a href="/tags/技术栈/" rel="tag"># 技术栈</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/游记/my-trip-to-suzhou/" rel="next" title="my-trip-to-suzhou">
+                <i class="fa fa-chevron-left"></i> my-trip-to-suzhou
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/编程之美/singleton-pattern/" rel="prev" title="单例模式">
+                单例模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/avatar.jpg"
+                alt="Jiang Jiuwen" />
+            
+              <p class="site-author-name" itemprop="name">Jiang Jiuwen</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是数据库"><span class="nav-number">1.</span> <span class="nav-text">什么是数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库分类"><span class="nav-number">2.</span> <span class="nav-text">数据库分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关系型数据库"><span class="nav-number">2.1.</span> <span class="nav-text">关系型数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非关系型数据库"><span class="nav-number">2.2.</span> <span class="nav-text">非关系型数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RDBMS和NoSQL比较"><span class="nav-number">2.3.</span> <span class="nav-text">RDBMS和NoSQL比较</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事务"><span class="nav-number">3.</span> <span class="nav-text">事务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原子性-Atomicity"><span class="nav-number">3.1.</span> <span class="nav-text">原子性(Atomicity)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一致性-Consistency"><span class="nav-number">3.2.</span> <span class="nav-text">一致性(Consistency)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隔离性-Isolation"><span class="nav-number">3.3.</span> <span class="nav-text">隔离性(Isolation)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#持久性-Durability"><span class="nav-number">3.4.</span> <span class="nav-text">持久性(Durability)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#范式"><span class="nav-number">4.</span> <span class="nav-text">范式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一范式-NF1"><span class="nav-number">4.1.</span> <span class="nav-text">第一范式(NF1)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二范式-NF2"><span class="nav-number">4.2.</span> <span class="nav-text">第二范式(NF2)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三范式-NF3"><span class="nav-number">4.3.</span> <span class="nav-text">第三范式(NF3)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语言"><span class="nav-number">5.</span> <span class="nav-text">语言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据定义语言-DDL"><span class="nav-number">5.1.</span> <span class="nav-text">数据定义语言(DDL)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据操作语言-DML"><span class="nav-number">5.2.</span> <span class="nav-text">数据操作语言(DML)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据控制语言-DCL"><span class="nav-number">5.3.</span> <span class="nav-text">数据控制语言(DCL)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务控制语言-TCL"><span class="nav-number">5.4.</span> <span class="nav-text">事务控制语言(TCL)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象"><span class="nav-number">6.</span> <span class="nav-text">对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">6.1.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">6.2.</span> <span class="nav-text">视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#触发器"><span class="nav-number">6.3.</span> <span class="nav-text">触发器</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jiang Jiuwen</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.6</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.6"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'vr5po2yVA1j6aNRoK50A5oxL-gzGzoHsz',
+        appKey: 'WJnSz2HPubLLqdC0iFSroNIH',
+        placeholder: '',
+        avatar:'identicon',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("vr5po2yVA1j6aNRoK50A5oxL-gzGzoHsz", "WJnSz2HPubLLqdC0iFSroNIH");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

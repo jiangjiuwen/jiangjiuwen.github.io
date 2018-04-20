@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/logo.ico?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/logo.ico?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/logo.ico?v=6.0.6">
+
+
+  <link rel="mask-icon" href="/logo.ico?v=6.0.6" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="keywords" content="jiangjiuwen,python,.net,blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jiuwen&#39;s Blog">
+<meta property="og:url" content="http://jiangjiuwen.com/index.html">
+<meta property="og:site_name" content="Jiuwen&#39;s Blog">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jiuwen&#39;s Blog">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jiuwen's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://jiangjiuwen.com/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Jiuwen's Blog</title>
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97899361-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-97899361-1');
+</script>
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jiuwen's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">.NET & Python Developer</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+</li>
+
+      
+
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jiangjiuwen.com/编程之美/bilinear-interpolation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiang Jiuwen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiuwen's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/编程之美/bilinear-interpolation/" itemprop="url">双线性插值算法</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-20T19:49:36+08:00">2018-04-20</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程之美/" itemprop="url" rel="index"><span itemprop="name">编程之美</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/编程之美/bilinear-interpolation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/编程之美/bilinear-interpolation/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/编程之美/bilinear-interpolation/" class="leancloud_visitors" data-flag-title="双线性插值算法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>前段时间项目上为了减小图像体积，比如将一个512 * 512的图像插值到100 * 100，用到了双线性插值算法，今天记录一下。</p>
+<p>主要包括两个步骤：矩阵映射和插值计算</p>
+<h1 id="矩阵映射"><a href="#矩阵映射" class="headerlink" title="矩阵映射"></a>矩阵映射</h1><p>要将一个(x, y)的矩阵比如512 * 512转换成(x’, y’)的矩阵比如100 * 100，则其缩放比为(x/x’, y/y’)</p>
+<p>那么转换后的矩阵中的点(m, n)映射到原始矩阵中的点为(m * x/x’, n * y/y’)</p>
+<p>比如，转换矩阵中的点(1, 1)则对应原始矩阵中的点(5.12, 5.12)，但是坐标点都是整数，原始矩阵中没有与之对应的像素点，那么就需要使用改点邻近的四个像素点进行计算，得到一个像素值。</p>
+<h1 id="插值计算"><a href="#插值计算" class="headerlink" title="插值计算"></a>插值计算</h1><p>下图是在网上找的一个插值计算的示意图。</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Bilinear_interpolation.png" alt=""></p>
+<p>所谓的双线性插值实际上使用了三次线性插值，首先利用点Q12和点Q22进行插值计算得到点R2的值，然后利用点Q11和Q21点进行插值计算得到点R1的值，最后利用得到点R1和点R2进行插值从而得到点P的值。</p>
+<p>线性插值的过程为(R2 - Q12) / (Q22 - R2) = (x - x1) / (x2 - x)</p>
+<p>如果Q12 Q22 Q11 Q21的像素值分别为200, 150, 100, 50，那么首先计算出R2的值为194，然后计算出R1的值为94，然后根据R1和R2计算出P点的像素值为182，所以经过插值计算后，映射之后的点(1, 1)的像素值为182。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jiangjiuwen.com/编程之美/virtual-environment-of-python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiang Jiuwen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiuwen's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/编程之美/virtual-environment-of-python/" itemprop="url">在Ubuntu系统中使用不同版本的Python环境</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-21T18:47:00+08:00">2018-03-21</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程之美/" itemprop="url" rel="index"><span itemprop="name">编程之美</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/编程之美/virtual-environment-of-python/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/编程之美/virtual-environment-of-python/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/编程之美/virtual-environment-of-python/" class="leancloud_visitors" data-flag-title="在Ubuntu系统中使用不同版本的Python环境">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Ubuntu16.4版本中默认包含python2.7和Python3.5两个版本，命令行中可以分别使用python和python3来启动并进入各自环境。</p>
+<p>virtualenv用于创建独立的Python环境，使得多个Python相互隔离，互不影响，它能够：</p>
+<ul>
+<li>在没有权限的情况下安装python包</li>
+<li>不同应用可以使用不同版本的python包</li>
+<li>一个环境下的python包升级不影响其他环境</li>
+</ul>
+<p>顾名思义，virtualenvwrapper则是对虚拟环境进行管理，是virtualenv的扩展包，它能够：</p>
+<ul>
+<li>将所有虚拟环境整合在一个目录下</li>
+<li>管理（新增，删除，复制）虚拟环境</li>
+<li>切换虚拟环境</li>
+</ul>
+<h1 id="安装virtualenvwrapper"><a href="#安装virtualenvwrapper" class="headerlink" title="安装virtualenvwrapper"></a>安装virtualenvwrapper</h1><p>对于一台全新的Ubuntu电脑，可能还需要首先安装pip，即python包管理器，命令如下。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python-pip  <span class="comment"># 对应python2</span></span><br><span class="line">sudo apt-get install python3-pip  <span class="comment"># 对应python3</span></span><br></pre></td></tr></table></figure></p>
+<p>之后使用pip安装virtualenvwrapper。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenvwrapper</span><br></pre></td></tr></table></figure></p>
+<p>注意，系统默认采用python2，所以，如果使用pip3进行安装，之后会报错，此处按下不表。</p>
+<h1 id="配置virtualenvwrapper"><a href="#配置virtualenvwrapper" class="headerlink" title="配置virtualenvwrapper"></a>配置virtualenvwrapper</h1><p>virtualenvwrapper安装完成之后需要对其进行简单配置。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir <span class="variable">$HOME</span>/.venvs</span><br><span class="line">sudo vim ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在打开的.bashrc文件中添加如下2行：</span></span><br><span class="line"><span class="built_in">export</span> WORKON_HOME=<span class="variable">$HOME</span>/.venvs</span><br><span class="line"><span class="built_in">source</span> /usr/<span class="built_in">local</span>/bin/virtualenvwrapper.sh</span><br></pre></td></tr></table></figure></p>
+<p>如果virtualenvwrapper是使用pip3进行安装，则会报如下错误。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/python: No module named virtualenvwrapper</span><br><span class="line">virtualenvwrapper.sh: There was a problem running the initialization hooks.</span><br><span class="line"></span><br><span class="line">If Python could not import the module virtualenvwrapper.hook_loader,</span><br><span class="line">check that virtualenvwrapper has been installed <span class="keyword">for</span></span><br><span class="line">VIRTUALENVWRAPPER_PYTHON=/usr/bin/python and that PATH is</span><br><span class="line"><span class="built_in">set</span> properly.</span><br></pre></td></tr></table></figure>
+<p>至此，virtualenvwrapper的安装和配置告一段落。</p>
+<h1 id="使用virtualenvwrapper管理虚拟环境"><a href="#使用virtualenvwrapper管理虚拟环境" class="headerlink" title="使用virtualenvwrapper管理虚拟环境"></a>使用virtualenvwrapper管理虚拟环境</h1><p>基于不同的python版本创建虚拟环境<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkvirtualenv -p /usr/bin/python2 scrapy_py2  <span class="comment"># 创建基于python2的虚拟环境scrapy_py2</span></span><br><span class="line">mkvirtualenv -p /usr/bin/python3 scrapy_py3  <span class="comment"># 创建基于python3虚拟环境scrapy_py3</span></span><br><span class="line"><span class="comment"># 如果提示mkvirtualenv权限问题，请检查$HOME/.venvs文件所属的用户和组。</span></span><br></pre></td></tr></table></figure></p>
+<p>创建成功之后系统默认进入当前虚拟环境，命令行前缀显示当前虚拟环境名称。进入虚拟环境之后所有的操作都基于当前python环境，不会对其他python环境产生影响。</p>
+<p>其他命令如下所示<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">workon  <span class="comment"># 列出所有的虚拟环境</span></span><br><span class="line">workon scrapy_py2  <span class="comment"># 切换到虚拟环境scrapy_py2</span></span><br><span class="line">deactivate  <span class="comment"># 退出当前虚拟环境</span></span><br><span class="line">rmvirtualenv scrapy_py2  <span class="comment"># 删除虚拟环境scrapy_py2</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jiangjiuwen.com/编程之美/the-import-operations-in-python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiang Jiuwen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiuwen's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/编程之美/the-import-operations-in-python/" itemprop="url">Python的几种导入操作</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-16T22:10:41+08:00">2018-03-16</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程之美/" itemprop="url" rel="index"><span itemprop="name">编程之美</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/编程之美/the-import-operations-in-python/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/编程之美/the-import-operations-in-python/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/编程之美/the-import-operations-in-python/" class="leancloud_visitors" data-flag-title="Python的几种导入操作">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="模块-Module-和包-Package"><a href="#模块-Module-和包-Package" class="headerlink" title="模块(Module)和包(Package)"></a>模块(Module)和包(Package)</h1><p>Python中一个源文件就是一个模块，即一个py文件就是一个模块，模块中可能包含字段、函数、类等定义，也可能什么都没有，即一个空的模块。</p>
+<p>Python包就是一个管理着一个或者一些模块的文件夹，其中有一个特殊的模块，即<code>__init__.py</code>，当加载一个包的时候，包中的<code>__init__.py</code>模块将被首先执行。包可以嵌套包含，即一个包下面还包含这一些子包。</p>
+<p>以下就是一个常见的包结构。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">package/</span><br><span class="line">    __init__.py</span><br><span class="line">    moduleA.py</span><br><span class="line">    moduleB.py</span><br><span class="line">    subPackage/</span><br><span class="line">        __init__.py</span><br><span class="line">        subModuleA.py</span><br><span class="line">        subModuleB.py</span><br></pre></td></tr></table></figure>
+<h1 id="几种import方式"><a href="#几种import方式" class="headerlink" title="几种import方式"></a>几种import方式</h1><p>以上面的包结构为例，假设包中没有<code>__init__.py</code>模块，<code>subPackage</code>包中的<code>subModuleA.py</code>模块的代码如下。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># subModuleA.py</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">subModuleFun</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'Hello from subModuleFun'</span>)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">subModuleFunTwo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'Hello from subModuleFunTwo'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>那么<code>package</code>包中的<code>moduleA.py</code>可以通过以下几种方式调用。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># moduleA.py</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 按照绝对路径导入subModuleA</span></span><br><span class="line"><span class="keyword">import</span> subPackage.subModuleA</span><br><span class="line">subPackage.subModuleA.subModuleFun() <span class="comment"># Hello from subModuleFun</span></span><br><span class="line">subPackage.subModuleA.subModuleFunTwo() <span class="comment"># Hello from subModuleFunTwo</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 为导入指定别名</span></span><br><span class="line"><span class="keyword">import</span> subPackage.subModuleA <span class="keyword">as</span> sma</span><br><span class="line">sma.subModuleFun() <span class="comment"># Hello from subModuleFun</span></span><br><span class="line">sma.subModuleFunTwo() <span class="comment"># Hello from subModuleFunTwo</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 按需导入，即只导入需要调用的内容</span></span><br><span class="line"><span class="keyword">from</span> subPackage.subModuleA <span class="keyword">import</span> subModuleFun</span><br><span class="line">subModuleFun() <span class="comment"># Hello from subModuleFun</span></span><br><span class="line">subModuleFunTwo() <span class="comment"># Error</span></span><br><span class="line">subPackage.subModuleA.subModuleFunTwo() <span class="comment"># Error</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 导入模块中所有内容</span></span><br><span class="line"><span class="keyword">from</span> subPackage.subModuleA <span class="keyword">import</span> *</span><br><span class="line">subModuleFun() <span class="comment"># Hello from subModuleFun</span></span><br><span class="line">subModuleFunTwo() <span class="comment"># Hello from subModuleFunTwo</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="init-py模块的作用"><a href="#init-py模块的作用" class="headerlink" title="__init__.py模块的作用"></a><code>__init__.py</code>模块的作用</h1><p>仍然以上面的包结构为例，包中有<code>__init__.py</code>模块，且<code>__init__.py</code>模块的代码如下。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># package/__init__.py</span></span><br><span class="line"><span class="keyword">from</span> moduleA <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> moduleB <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># package/subPackage/__init__.py</span></span><br><span class="line"><span class="keyword">from</span> subModuleA <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> subModuleB <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># moduleA.py调用subPackage.subModuleA中的subModuleFun方法</span></span><br><span class="line"><span class="keyword">from</span> subPackage <span class="keyword">import</span> subModuleFun</span><br><span class="line">subModuleFun() <span class="comment"># Hello from subModuleFun</span></span><br></pre></td></tr></table></figure></p>
+<p>由此可见，此时我如果想从某个包里面调用某个模块中的某个函数时就可以直接从包里面导入，而不需要指定该函数所在模块的路径。从而带来两个好处，一个是简化了import路径，二是便于开发者控制各个模块或方法的访问级别。</p>
+<h1 id="import的作用域"><a href="#import的作用域" class="headerlink" title="import的作用域"></a>import的作用域</h1><p>如果在模块的最顶端进行导入，则其作用域为整个模块，表示整个模块的内容都能访问导入的内容。</p>
+<p>如果仅在某个代码块中进行导入，则其作用域为该代码块。如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> globalModule</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">funcA</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">import</span> subModule</span><br><span class="line">    globalModule.func()</span><br><span class="line">    subModule.func()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">funcB</span><span class="params">()</span>:</span></span><br><span class="line">    globalModule.func()</span><br><span class="line">    subModule.func() <span class="comment"># Error</span></span><br><span class="line"></span><br><span class="line">globalModule.func()</span><br></pre></td></tr></table></figure>
+<h1 id="循环导入"><a href="#循环导入" class="headerlink" title="循环导入"></a>循环导入</h1><p>循环导入即A模块导入B模块，同时B模块中又导入了A模块，此时运行任意一个模块都将收到<code>AttributeError</code>的报错。</p>
+<p>如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># A.py</span></span><br><span class="line"><span class="keyword">import</span> B</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">funcA</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'funcA'</span>)</span><br><span class="line"></span><br><span class="line">funcA()</span><br><span class="line">B.funcB()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># B.py</span></span><br><span class="line"><span class="keyword">import</span> A</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">funcB</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'funcB'</span>)</span><br><span class="line"></span><br><span class="line">funcB()</span><br><span class="line">A.funcA()</span><br></pre></td></tr></table></figure>
+<h1 id="导入和标准模块重名的模块"><a href="#导入和标准模块重名的模块" class="headerlink" title="导入和标准模块重名的模块"></a>导入和标准模块重名的模块</h1><p>当我们自定义的模块名称和标准库中的模块名称重复的时候，导入就有可能会发生混乱，此时在调用标准库中的函数时，编译器可能会报错该方法不存在，不过在高版本的python中好像会自动到标准库中寻找该方法。不过，为了保证代码的正确性和可读性，不建议自定义的模块和标准库模块重名。</p>
+<h1 id="相对路径导入"><a href="#相对路径导入" class="headerlink" title="相对路径导入"></a>相对路径导入</h1><p>如果子包中的模块想要访问上级包中的内容，则可以使用相对路径导入。</p>
+<p><strong>注意，此时正在导入的模块的<code>__name__</code>不能是<code>__main__</code>，即此时执行的主函数不在当前正在导入的模块中。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># subModuleA.py</span></span><br><span class="line"><span class="keyword">from</span> ..moduleA <span class="keyword">import</span> moduleFun <span class="comment"># 一个.表示一级目录</span></span><br><span class="line">moduleFun()</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jiangjiuwen.com/编程之美/overview-of-collections-module/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiang Jiuwen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiuwen's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/编程之美/overview-of-collections-module/" itemprop="url">collections模块常用数据结构</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-10T13:57:08+08:00">2018-03-10</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程之美/" itemprop="url" rel="index"><span itemprop="name">编程之美</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/编程之美/overview-of-collections-module/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/编程之美/overview-of-collections-module/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/编程之美/overview-of-collections-module/" class="leancloud_visitors" data-flag-title="collections模块常用数据结构">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>collections模块是python自带的模块，为开发者提供了很多方便且高效的数据结构，帮助开发者写出简单高效且可读性高的python代码。</p>
+<h1 id="collections模块常用数据结构"><a href="#collections模块常用数据结构" class="headerlink" title="collections模块常用数据结构"></a>collections模块常用数据结构</h1><p>collections模块中最常被使用的数据结构主要包括deque、defaultdict、namedtuple、Counter、OrderedDict、ChainMap这6个，如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">deque</td>
+<td>双端队列</td>
+</tr>
+<tr>
+<td style="text-align:center">defaultdict</td>
+<td>具有默认值的字典类型</td>
+</tr>
+<tr>
+<td style="text-align:center">namedtuple</td>
+<td>具有类的特性的tuple类型</td>
+</tr>
+<tr>
+<td style="text-align:center">Counter</td>
+<td>具有计数功能的字典类型</td>
+</tr>
+<tr>
+<td style="text-align:center">OrderedDict</td>
+<td>按添加顺序排列的字典类型</td>
+</tr>
+<tr>
+<td style="text-align:center">ChainMap</td>
+<td>将多个字典链接为一个字典</td>
+</tr>
+</tbody>
+</table>
+<h1 id="tuple和namedtuple"><a href="#tuple和namedtuple" class="headerlink" title="tuple和namedtuple"></a>tuple和namedtuple</h1><p>tuple特点：</p>
+<ul>
+<li>不可变（不完全不可变，比如某个item为list或其他可变类型时，其值就可变，不推荐这种做法）</li>
+<li>可遍历</li>
+<li>可拆包</li>
+<li>可哈希（使其可以作为字典的key）</li>
+<li>线程安全</li>
+</ul>
+<p>tuple的item不像字典一样有key对应，为了使tuple可以像类一样通过指定字段名称来调用tuple的值，于是就有了namedtuple。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">User = namedtuple(<span class="string">"User"</span>, (<span class="string">'name'</span>, <span class="string">'age'</span>, <span class="string">'height'</span>))</span><br><span class="line">fields = (<span class="string">'jim'</span>, <span class="number">22</span>, <span class="number">176</span>)</span><br><span class="line">user = User(*fields)</span><br><span class="line">name, *other = user <span class="comment"># 拆包</span></span><br><span class="line">print(name, other)</span><br></pre></td></tr></table></figure>
+<p>namedtuple特点：</p>
+<ul>
+<li>节省空间。不会生成不必要的类字段</li>
+<li>代码简洁、美观。少量的代码即能实现类和tuple的特性</li>
+</ul>
+<h1 id="defaultdict"><a href="#defaultdict" class="headerlink" title="defaultdict"></a>defaultdict</h1><p>通常当我们操作的索引不在字典当前字典中时，编译器会报错，此时就要通过if else之类的语句进行判断该索引是否在字典中，然后再进行处理，通常这样做效率不高而且代码不优雅。而defaultdict就可以定义一个默认值，当操作不存在的索引时，就会给该索引赋予默认值，然后再进行后续操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">default_dict = defaultdict(int)</span><br><span class="line">default_dict[<span class="string">'age'</span>] += <span class="number">22</span></span><br></pre></td></tr></table></figure>
+<h1 id="deque"><a href="#deque" class="headerlink" title="deque"></a>deque</h1><p>deque具有list相似的特性，但也有一些区别。</p>
+<ul>
+<li>不同的是list默认函数只能对list对尾进行操作，而deque对对头和队尾都可以操作</li>
+<li>deque是线程安全的，而list不是</li>
+</ul>
+<p>另外，python3中的queue就是用deque来实现。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name_deque = deque([<span class="string">'jim'</span>, <span class="string">'jack'</span>, <span class="string">'tony'</span>])</span><br><span class="line">name_deque.appendleft(<span class="string">'lily'</span>)</span><br><span class="line">name_deque.reverse()</span><br></pre></td></tr></table></figure>
+<h1 id="Counter"><a href="#Counter" class="headerlink" title="Counter"></a>Counter</h1><p>Counter可以统计任意可迭代的类型，比如list、tuple、dict、string等。Counter中比较重要的函数有update和most_comon。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">counter1 = Counter(<span class="string">'dsagwdsdagwecsada'</span>)</span><br><span class="line">print(counter1)</span><br><span class="line">counter2 = Counter(&#123;<span class="string">'k1'</span>:<span class="string">'v1'</span>, <span class="string">'k2'</span>:<span class="string">'v2'</span>, <span class="string">'k3'</span>:<span class="string">'v1'</span>&#125;)</span><br><span class="line">print(counter2)</span><br><span class="line">counter3 = Counter(<span class="string">'ggggggg'</span>)</span><br><span class="line">counter1.update(counter3)</span><br><span class="line">print(counter1)</span><br></pre></td></tr></table></figure>
+<h1 id="OrderedDict"><a href="#OrderedDict" class="headerlink" title="OrderedDict"></a>OrderedDict</h1><p>顾名思义，OrderedDict就是用来表征已经排好序的字典，由于字典具有无序性，即字典中的key的位置是不固定的，而OrderedDict中的键值对则是按照添加时间按序排列的,即保证了时序性，又有dict的方便性。</p>
+<p>值得注意的是，在python3中，dict默认是有序的，在python2中不是，但是OrderedDict中包含了一些dict没有的方法，比如clear，所以在python3中还是有必要使用OrderedDict的。</p>
+<h1 id="ChainMap"><a href="#ChainMap" class="headerlink" title="ChainMap"></a>ChainMap</h1><p>当我们需要遍历多个字典的时候，需要写大量重复代码，这个时候ChainMap就能将多个字典链接起来，使其看起来像是一个字典。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">users1 = &#123;<span class="string">'a'</span>:<span class="string">'jack'</span>, <span class="string">'b'</span>:<span class="string">'lily'</span>&#125;</span><br><span class="line">users2 = &#123;<span class="string">'b'</span>:<span class="string">'tony'</span>, <span class="string">'d'</span>:<span class="string">'jason'</span>&#125;</span><br><span class="line">users = ChainMap(users1, users2)</span><br><span class="line">print(users)</span><br><span class="line">print(users.popitem(), users)</span><br><span class="line">print(users.maps)</span><br></pre></td></tr></table></figure>
+<p>值得注意的是，如果不同的字典中具有相同的key，则只操作第一个key，后面出现相同的key时会将其忽略</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>python内置的基本类型已经具有非常丰富的功能，而以上数据类型作为基本类型的升级版不仅增强了性能，保证编写的代码更健壮，而且使代码编写更方便，写出来的代码更优雅。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jiangjiuwen.com/随笔/a-or-b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiang Jiuwen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiuwen's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/随笔/a-or-b/" itemprop="url">人生就是连续不断的选择题</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-02T19:07:51+08:00">2017-12-02</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随笔/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/随笔/a-or-b/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/随笔/a-or-b/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/随笔/a-or-b/" class="leancloud_visitors" data-flag-title="人生就是连续不断的选择题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>前几天收到域名即将过期的提醒，于是赶紧续费了两年，才发现好久没写博客了，记录一下目前的生活吧。</p>
+<p>前段时间其实一直在找工作，打算跳槽到杭州，可能是还不习惯武汉的生活，也许是对现在的工作感到无趣，准备转行大数据，做Python开发，可是几乎收不到面试，难得收到网易和阿里的电话面试，也在第一轮就挂了，海投了一段时间的Java和Python无果之后决定继续做.NET，虽说面试机会有所增加，选择面却变窄了，因为.NET的行情实在不太好，大厂基本不再使用.NET。虽然拿到几个Offer，不过最终还是因为一些原因拒绝了。</p>
+<p>月初听说最近的股市行情不错，于是在马上开通了股票账户，转了一万块钱进去，算是正式涉足中国股市。证券公司的同学给我推荐了京东方A，据说潜力无限，可以助我发家致富，走向人生巅峰，于是果断重仓之。剩下一点钱打算炒炒短线，可是面对各种走势的股票我却犯了选择困难症，尽管每天都有各路股神对我灌输各类股票的潜规则。调整是必然的，下跌总是会有的，淡定才是王道。</p>
+<p>周三上海的同时来这边出差，于是请他吃了地道了湖北菜，点了巨辣的辣的跳、武昌鱼，本来想点非常好吃的莲藕排骨汤，可惜已经卖完了，于是换成了藕饼，对于吃甜食的口味清淡的上海人来说，面对巨辣的食物果断选择了狗带。很高兴再次见到老同事，吐槽了武汉的环境和现在的工作之余，得知他们的项目越来越规范，我之前参与的项目也越来越稳定，我开始怀疑，当初的选择是否是一时冲动？</p>
+<p>人生就是连续不断的选择题，且不论结果对错，光是做出选择这一举动，就感觉已经拼尽了全力啊… :-(</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/avatar.jpg"
+                alt="Jiang Jiuwen" />
+            
+              <p class="site-author-name" itemprop="name">Jiang Jiuwen</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank" rel="external nofollow">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jiang Jiuwen</span>
+
+  
+
+  
+</div>
+
+
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.6</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/reading_progress/reading_progress.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.6"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'vr5po2yVA1j6aNRoK50A5oxL-gzGzoHsz',
+        appKey: 'WJnSz2HPubLLqdC0iFSroNIH',
+        placeholder: '',
+        avatar:'identicon',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("vr5po2yVA1j6aNRoK50A5oxL-gzGzoHsz", "WJnSz2HPubLLqdC0iFSroNIH");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
