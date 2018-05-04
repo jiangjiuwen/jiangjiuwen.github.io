@@ -2,10 +2,12 @@
 title: travel-to-huangshan
 categories: 游记
 tags:
+- 安徽
 - 黄山
+- 旅游
 date: 2017-04-23 18:34:40
 type: 'picture'
-keywords: 旅游,黄山
+keywords: 旅游,安徽,黄山
 ---
 <blockquote class="blockquote-center">黄山归来不看山</blockquote>
 {% gp group-layout %}

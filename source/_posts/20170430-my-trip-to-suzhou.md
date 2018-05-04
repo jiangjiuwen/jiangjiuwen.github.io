@@ -5,9 +5,11 @@ date: 2017-04-30 16:23:54
 tags:
 - 苏州
 - 拙政园
+- 旅游
 type: 'picture'
 keywords: 旅游,苏州,拙政园
 ---
+<blockquote class="blockquote-center">苏州 · 拙政园</blockquote>
 {% gp group-layout %}
 ![](http://7xr526.com1.z0.glb.clouddn.com/suzhou/new%20image%20-%20gjzve.jpg)
 <!--![](http://7xr526.com1.z0.glb.clouddn.com/suzhou/new%20image%20-%20pvzmv.jpg)-->
