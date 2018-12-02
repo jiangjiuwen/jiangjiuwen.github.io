@@ -103,14 +103,18 @@
 
 
 
-  <meta name="keywords" content="jiangjiuwen,python,.net,blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jiuwen&#39;s Blog">
-<meta property="og:url" content="http://jiangjiuwen.com/tags/设计模式/index.html">
+  <meta name="description" content="在Angular中使用可观察对象进行发布和订阅的时候容易造成多次订阅的情况，比如我们通常在OnInit生命周期函数中进行可观察对象的订阅，由于可观察对象是一个单例，当我们下次实例化当前类的时候，又会订阅一次该可观察对象，从而导致数据发布更新的时候，订阅者会多次响应订阅操作。 实际上当我们订阅该对象的时候会返回一个观察者对象，而造成重复订阅的根本原因是因为没有在合适的时机将该观察者取消订阅。通常在销">
+<meta name="keywords" content="Angular">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular重复订阅的问题">
+<meta property="og:url" content="http://jiangjiuwen.com/编程之美/angular-duplicate-subscription/index.html">
 <meta property="og:site_name" content="Jiuwen&#39;s Blog">
+<meta property="og:description" content="在Angular中使用可观察对象进行发布和订阅的时候容易造成多次订阅的情况，比如我们通常在OnInit生命周期函数中进行可观察对象的订阅，由于可观察对象是一个单例，当我们下次实例化当前类的时候，又会订阅一次该可观察对象，从而导致数据发布更新的时候，订阅者会多次响应订阅操作。 实际上当我们订阅该对象的时候会返回一个观察者对象，而造成重复订阅的根本原因是因为没有在合适的时机将该观察者取消订阅。通常在销">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-02T09:35:57.999Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jiuwen&#39;s Blog">
+<meta name="twitter:title" content="Angular重复订阅的问题">
+<meta name="twitter:description" content="在Angular中使用可观察对象进行发布和订阅的时候容易造成多次订阅的情况，比如我们通常在OnInit生命周期函数中进行可观察对象的订阅，由于可观察对象是一个单例，当我们下次实例化当前类的时候，又会订阅一次该可观察对象，从而导致数据发布更新的时候，订阅者会多次响应订阅操作。 实际上当我们订阅该对象的时候会返回一个观察者对象，而造成重复订阅的根本原因是因为没有在合适的时机将该观察者取消订阅。通常在销">
 
 
 
@@ -119,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://jiangjiuwen.com/tags/设计模式/"/>
+  <link rel="canonical" href="http://jiangjiuwen.com/编程之美/angular-duplicate-subscription/"/>
 
 
 
@@ -129,7 +133,7 @@
   };
 </script>
 
-  <title>标签: 设计模式 | Jiuwen's Blog</title>
+  <title>Angular重复订阅的问题 | Jiuwen's Blog</title>
   
 
 
@@ -185,7 +189,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -294,112 +298,223 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>设计模式<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jiangjiuwen.com/编程之美/angular-duplicate-subscription/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiang Jiuwen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiuwen's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/编程之美/summary-of-design-pattern/" itemprop="url">
-              
-                <span itemprop="name">设计模式概览</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">Angular重复订阅的问题</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-01T22:41:57+08:00"
-              content="2017-10-01" >
-          10-01
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-02T17:18:13+08:00">2018-12-02</time>
+            
 
-    </header>
-  </article>
+            
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/编程之美/" itemprop="url" rel="index"><span itemprop="name">编程之美</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/编程之美/angular-duplicate-subscription/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/编程之美/angular-duplicate-subscription/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/编程之美/angular-duplicate-subscription/" class="leancloud_visitors" data-flag-title="Angular重复订阅的问题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/编程之美/singleton-pattern/" itemprop="url">
-              
-                <span itemprop="name">单例模式</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-08T20:31:56+08:00"
-              content="2017-05-08" >
-          05-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <p>在Angular中使用可观察对象进行发布和订阅的时候容易造成多次订阅的情况，比如我们通常在OnInit生命周期函数中进行可观察对象的订阅，由于可观察对象是一个单例，当我们下次实例化当前类的时候，又会订阅一次该可观察对象，从而导致数据发布更新的时候，订阅者会多次响应订阅操作。</p>
+<p>实际上当我们订阅该对象的时候会返回一个观察者对象，而造成重复订阅的根本原因是因为没有在合适的时机将该观察者取消订阅。通常在销毁该类的时候取消订阅是一个不错的选择，即OnDestroy生命周期函数。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明观察者对象</span></span><br><span class="line">saveDataObserver: Subscription;</span><br><span class="line"></span><br><span class="line">OnInit() &#123;</span><br><span class="line">    <span class="comment">// 订阅可观察对象，返回观察者</span></span><br><span class="line">    <span class="keyword">this</span>.saveDataObserver = <span class="keyword">this</span>.svc.saveData$.subscript(<span class="function"><span class="params">data</span> =&gt;</span> &#123;...&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">OnDestroy() &#123;</span><br><span class="line">    <span class="comment">// 取消订阅，防止重复订阅</span></span><br><span class="line">    <span class="keyword">this</span>.saveDataObserver.unsubscript();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Jiang Jiuwen</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://jiangjiuwen.com/编程之美/angular-duplicate-subscription/" title="Angular重复订阅的问题">http://jiangjiuwen.com/编程之美/angular-duplicate-subscription/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Angular/" rel="tag"># Angular</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/编程之美/what-is-network-programming/" rel="next" title="我所理解的网络编程">
+                <i class="fa fa-chevron-left"></i> 我所理解的网络编程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -746,6 +861,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
+
+
 
   
 

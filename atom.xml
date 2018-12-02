@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jiangjiuwen.com/"/>
-  <updated>2018-06-08T14:19:20.607Z</updated>
+  <updated>2018-12-02T09:35:57.999Z</updated>
   <id>http://jiangjiuwen.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Angular重复订阅的问题</title>
+    <link href="http://jiangjiuwen.com/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E/angular-duplicate-subscription/"/>
+    <id>http://jiangjiuwen.com/编程之美/angular-duplicate-subscription/</id>
+    <published>2018-12-02T09:18:13.000Z</published>
+    <updated>2018-12-02T09:35:57.999Z</updated>
+    
+    <content type="html"><![CDATA[<p>在Angular中使用可观察对象进行发布和订阅的时候容易造成多次订阅的情况，比如我们通常在OnInit生命周期函数中进行可观察对象的订阅，由于可观察对象是一个单例，当我们下次实例化当前类的时候，又会订阅一次该可观察对象，从而导致数据发布更新的时候，订阅者会多次响应订阅操作。</p><p>实际上当我们订阅该对象的时候会返回一个观察者对象，而造成重复订阅的根本原因是因为没有在合适的时机将该观察者取消订阅。通常在销毁该类的时候取消订阅是一个不错的选择，即OnDestroy生命周期函数。</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明观察者对象</span></span><br><span class="line">saveDataObserver: Subscription;</span><br><span class="line"></span><br><span class="line">OnInit() &#123;</span><br><span class="line">    <span class="comment">// 订阅可观察对象，返回观察者</span></span><br><span class="line">    <span class="keyword">this</span>.saveDataObserver = <span class="keyword">this</span>.svc.saveData$.subscript(<span class="function"><span class="params">data</span> =&gt;</span> &#123;...&#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">OnDestroy() &#123;</span><br><span class="line">    <span class="comment">// 取消订阅，防止重复订阅</span></span><br><span class="line">    <span class="keyword">this</span>.saveDataObserver.unsubscript();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在Angular中使用可观察对象进行发布和订阅的时候容易造成多次订阅的情况，比如我们通常在OnInit生命周期函数中进行可观察对象的订阅，由于可观察对象是一个单例，当我们下次实例化当前类的时候，又会订阅一次该可观察对象，从而导致数据发布更新的时候，订阅者会多次响应订阅操作。
+      
+    
+    </summary>
+    
+      <category term="编程之美" scheme="http://jiangjiuwen.com/categories/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E/"/>
+    
+    
+      <category term="Angular" scheme="http://jiangjiuwen.com/tags/Angular/"/>
+    
+  </entry>
   
   <entry>
     <title>我所理解的网络编程</title>
